@@ -6,6 +6,8 @@ import './style.css';
 // appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // MUSKETEERS
+//*************************************** */
+
 // 1.
 const musketeers = ['Athos', 'Porthos', 'Aramis'];
 
@@ -39,4 +41,22 @@ for (const musket of musketeers) {
 // Athos Porthos D'Artagnan
 
 // SUM OF VALUES
+// *************************************** */
 const values = [3, 11, 7, 2, 9, 10];
+
+let sum = 0;
+//1. using for loop
+for (let i = 0; i < values.length; i++) {
+  sum += values[i];
+}
+
+console.log(sum); //42;
+
+//
+
+let total = 0;
+values.forEach((value) => (total += value));
+
+console.log(total); //42;
+
+//*************************************** */
