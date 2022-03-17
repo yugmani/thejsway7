@@ -102,7 +102,7 @@ console.log('Highest Value: ', highest);
 // **************************************
 
 //1. Using for loop
-let answer = 'No stop';
+let answer = 'stop';
 let listOfWords = [];
 do {
   answer = prompt("Enter a word: (Enter 'stop' to stop)", '');
