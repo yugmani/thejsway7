@@ -108,3 +108,5 @@ do {
   answer = prompt("Enter a word: (Enter 'stop' to stop)", '');
   if (answer != 'stop') listOfWords.push(answer);
 } while (answer != 'stop');
+
+console.log('Array of Words: ', listOfWords);
