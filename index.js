@@ -79,11 +79,11 @@ console.log('Cumulated = ', cumulated); //42
 
 const valuesNew = [3, 11, 7, 2, 9, 10];
 
-// using Math.max() method
+//1 using Math.max() method
 let max = Math.max(...valuesNew);
 console.log('Max Value: ', max); //11
 
-//using array.reduce() method
+//2 using array.reduce() method
 let maximum = valuesNew.reduce((prev, current, index, array) => {
   return prev > current ? prev : current;
 });
@@ -91,9 +91,20 @@ let maximum = valuesNew.reduce((prev, current, index, array) => {
 console.log('Maximum: ', maximum); //11
 
 let highest;
-//using for loop
+//3 using for loop
 for (let i = 0; i < valuesNew.length; i++) {
   highest = highest > valuesNew[i] ? highest : valuesNew[i];
 }
 
 console.log('Highest Value: ', highest);
+
+// LIST OF WORDS
+// **************************************
+
+//1. Using for loop
+let answer = 'No stop';
+let listOfWords = [];
+do {
+  answer = prompt("Enter a word: (Enter 'stop' to stop)", '');
+  if (answer != 'stop') listOfWords.push(answer);
+} while (answer != 'stop');
