@@ -44,19 +44,56 @@ for (const musket of musketeers) {
 // *************************************** */
 const values = [3, 11, 7, 2, 9, 10];
 
-let sum = 0;
 //1. using for loop
+let sum = 0;
+
 for (let i = 0; i < values.length; i++) {
   sum += values[i];
 }
 
-console.log(sum); //42;
+console.log('Sum: ', sum); //42;
 
-//
+//2. using forEach loop
 
 let total = 0;
 values.forEach((value) => (total += value));
 
-console.log(total); //42;
+console.log('Total: ', total); //42;
 
+//3 using for...of loop
+let whole = 0;
+
+for (const value of values) {
+  whole += value;
+}
+
+console.log('Whole: ', whole); //42
+
+//4 using array.reduce() method
+let cumulated = values.reduce((accu, current) => accu + current);
+
+console.log('Cumulated = ', cumulated); //42
+
+// ARRAY MAXIMUM
 //*************************************** */
+
+const valuesNew = [3, 11, 7, 2, 9, 10];
+
+// using Math.max() method
+let max = Math.max(...valuesNew);
+console.log('Max Value: ', max); //11
+
+//using array.reduce() method
+let maximum = valuesNew.reduce((prev, current, index, array) => {
+  return prev > current ? prev : current;
+});
+
+console.log('Maximum: ', maximum); //11
+
+let highest;
+//using for loop
+for (let i = 0; i < valuesNew.length; i++) {
+  highest = highest > valuesNew[i] ? highest : valuesNew[i];
+}
+
+console.log('Highest Value: ', highest);
